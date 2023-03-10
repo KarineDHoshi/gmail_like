@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Emails</h1>
+
+<div id="emails">
+  <% @emails.each do |email| %>
+    <%= render email %>
+    <p>
+      <%= link_to "Show this email", email %>
+    </p>
+  <% end %>
+</div>
+
+<%= button_to "Nouveau email", "/emails", method: "post", class: "btn btn-primary mx-3" %>
